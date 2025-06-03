@@ -1,0 +1,17 @@
+<link rel="stylesheet" href="/css/editpost.css">
+
+<div class="form-container">
+  <h2>Edit Blog Post</h2>
+  <form action="/edit/<%= post.id %>" method="POST">
+    <label>Title:</label>
+    <input type="text" name="title" value="<%= post.title %>" required>
+
+    <label>Category:</label>
+    <input type="text" name="category" value="<%= post.category %>" required>
+
+    <label>Content:</label>
+    <textarea name="content" rows="5" required><%= post.content %></textarea>
+
+    <button type="submit">Update Post</button>
+  </form>
+</div>

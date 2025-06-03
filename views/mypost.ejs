@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Create/Edit Post</title>
+    <link rel="stylesheet" href="/css/mypost.css">
+</head>
+<body>
+<nav>
+    <span class="logo">MyBlogSpot</span>
+    <div class="nav-links">
+      <a href="/home">Home</a>
+      <a href="/mypost">New Post</a>
+      <a href="/logout">Logout</a>
+</nav>
+
+<div class="form-container">
+    <h2>Create or Edit Blog Post</h2>
+    <form action="/submit-post" method="POST">
+        <label>Title:</label>
+        <input type="text" name="title" required>
+
+        <label>Category:</label>
+        <input type="text" name="category">
+
+        <label>Content:</label>
+        <textarea name="content" rows="10" required></textarea>
+
+        <button type="submit">Save Post</button>
+    </form>
+</div>
+</body>
+</html>

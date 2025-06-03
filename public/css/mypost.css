@@ -1,0 +1,194 @@
+/* Reset default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f8fa; /* Light background */
+  color: #333; /* Dark text for readability */
+  line-height: 1.6;
+  padding-top: 60px; /* Space for fixed navbar */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Fixed Navigation Bar */
+nav {
+  background-color: #4A90E2;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 20px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between; /* Align items to the left and right */
+  align-items: center; /* Vertically align items */
+}
+
+/* Logo */
+nav .logo {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+/* Container for navigation links */
+nav .nav-links {
+  display: flex; /* Use flexbox to align the links */
+  justify-content: flex-end; /* Align the links to the right */
+  gap: 20px; /* Space between the links */
+}
+
+/* Navigation links (Home, My Post, Logout) */
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+
+/* Hover effect on navigation links */
+nav a:hover {
+  color: #ffbc00;
+}
+
+
+
+
+.container {
+  max-width: 1400px;
+  margin: 40px auto;
+  padding: 20px;
+  background: #fff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+
+/* Headings */
+h3 {
+  color: #2c3e50;
+  font-size: 28px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+h4 {
+  color: #34495e;
+  margin-top: 25px;
+  font-size: 22px;
+  border-bottom: 2px solid #eee;
+  padding-bottom: 6px;
+}
+
+/* Paragraphs */
+p {
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Post List */
+ul {
+  list-style-type: none;
+  padding-left: 0;
+}
+
+li {
+  padding: 15px;
+  margin-bottom: 20px;
+  background: #f0f4f8;
+  border-left: 5px solid #3498db;
+  border-radius: 8px;
+  transition: background 0.3s;
+}
+.no-posts-msg {
+  font-size: 16px;
+  margin-bottom: 10px;
+  text-align: left;
+}
+
+li:hover {
+  background: #e4ecf4;
+}
+
+/* Post Title */
+li h4 {
+  margin: 0 0 8px 0;
+  color: #2d3436;
+}
+
+/* Small text */
+small {
+  color: #7f8c8d;
+  font-size: 14px;
+}
+
+/* Form Container */
+.form-container {
+  max-width: 600px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #ffffff;
+  border-radius: 12px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+/* Heading */
+.form-container h2 {
+  margin-bottom: 25px;
+  font-size: 26px;
+  color: #2c3e50;
+  text-align: center;
+}
+
+/* Labels */
+.form-container label {
+  display: block;
+  margin-bottom: 8px;
+  font-weight: 600;
+  color: #34495e;
+}
+
+/* Inputs and Textarea */
+.form-container input[type="text"],
+.form-container textarea {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 20px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 16px;
+  resize: vertical;
+  transition: border 0.3s;
+}
+
+.form-container input[type="text"]:focus,
+.form-container textarea:focus {
+  border-color: #3498db;
+  outline: none;
+}
+
+/* Submit Button */
+.form-container button[type="submit"] {
+  width: 100%;
+  padding: 12px;
+  background-color: #3498db;
+  color: #fff;
+  font-size: 16px;
+  font-weight: bold;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.form-container button[type="submit"]:hover {
+  background-color: #2980b9;
+}
+

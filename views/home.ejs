@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Home - MyBlogPost</title>
+    <link rel="stylesheet" href="/css/mypost.css">
+    <link rel="stylesheet" href="/css/home.css">
+</head>
+<body>
+<nav>
+    <span class="logo">MyBlogSpot</span>
+    <div class="nav-links">
+      <a href="/home">Home</a>
+      <a href="/mypost">New Post</a>
+      <a href="/logout">Logout</a>
+</nav>
+
+
+
+  <div class="container">
+  <h3>Welcome to MyBlogSpot, <%= userName %>!</h3>
+  <p>You are successfully logged in.</p>
+  <table>
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Category</th>
+        <th>Date</th>
+        <th>Preview</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody>
+      <% posts.forEach(post => { %>
+        <tr>
+          <td><%= post.title %></td>
+          <td><%= post.category %></td>
+          <td><%= new Date(post.created_at).toISOString().split('T')[0] %></td>
+          <td><%= post.content.substring(0, 100) %>...</td>
+          <td>
+            <a href="/view/<%= post.id %>" class="btn btn-info">View</a>
+            <a href="/edit/<%= post.id %>" class="btn btn-warning">Edit</a>
+            <form action="/delete/<%= post.id %>" method="POST">
+              <button class="btn btn-danger" type="submit">Delete</button>
+            </form>
+          </td>
+        </tr>
+      <% }) %>
+    </tbody>
+  </table>
+</div>
+
+
+</body>
+</html>

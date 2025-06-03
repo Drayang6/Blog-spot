@@ -1,0 +1,203 @@
+/* Reset default margins and paddings */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body Styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background-color: #f7f8fa; /* Light background */
+  color: #333; /* Dark text for readability */
+  line-height: 1.6;
+  padding-top: 60px; /* Space for fixed navbar */
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+/* Fixed Navigation Bar */
+nav {
+  background-color: #4A90E2;
+  color: white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 15px 20px;
+  z-index: 1000;
+  display: flex;
+  justify-content: space-between; /* Align items to the left and right */
+  align-items: center; /* Vertically align items */
+}
+
+/* Logo */
+nav .logo {
+  font-size: 1.8em;
+  font-weight: bold;
+}
+
+/* Container for navigation links */
+nav .nav-links {
+  display: flex; /* Use flexbox to align the links */
+  justify-content: flex-end; /* Align the links to the right */
+  gap: 20px; /* Space between the links */
+}
+
+/* Navigation links (Home, My Post, Logout) */
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 1.2em;
+  transition: color 0.3s;
+}
+
+/* Hover effect on navigation links */
+nav a:hover {
+  color: #ffbc00;
+}
+
+/* Main content area */
+h2 {
+  font-size: 2.5em;
+  margin-top: 80px; /* Space below navbar */
+  color: #333;
+}
+
+p {
+  font-size: 1.2em;
+  color: #555;
+  margin-bottom: 30px;
+}
+
+h3 {
+  color: #333;
+  font-size: 2em;
+  margin-bottom: 15px;
+}
+
+/* Styling the list of posts */
+ul {
+  list-style: none;
+}
+
+ul li {
+  background-color: #fff;
+  padding: 20px;
+  margin: 15px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+ul li h4 {
+  font-size: 1.8em;
+  color: #4A90E2;
+}
+
+ul li p {
+  font-size: 1.2em;
+  color: #555;
+}
+
+ul li p strong {
+  color: #333;
+}
+
+ul li small {
+  font-size: 0.9em;
+  color: #888;
+}
+
+/* Styling for when there are no posts */
+.no-posts {
+  font-size: 1.3em;
+  color: #888;
+  text-align: center;
+  margin-top: 40px;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  body {
+    padding-top: 80px; /* Space for navbar on small screens */
+  }
+
+  nav a {
+    font-size: 1em;
+  }
+
+  h2 {
+    font-size: 2em;
+  }
+
+  h3 {
+    font-size: 1.6em;
+  }
+}
+
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+  margin-bottom: 20px;
+}
+
+th, td {
+  padding: 12px 15px;
+  border-bottom: 1px solid #ddd;
+  vertical-align: middle;
+}
+
+th {
+  background-color: #4A90E2;
+  color: #fff;
+}
+
+td {
+  color: #555;
+}
+
+tr:hover {
+  background-color: #f1f1f1;
+}
+
+.btn {
+  padding: 6px 12px;
+  border: none;
+  border-radius: 5px;
+  text-decoration: none;
+  font-size: 0.9rem;
+  cursor: pointer;
+}
+
+.btn-info {
+  background-color: #17a2b8;
+  color: white;
+}
+
+.btn-warning {
+  background-color: #ffc107;
+  color: white;
+}
+
+.btn-danger {
+  background-color: #dc3545;
+  color: white;
+}
+
+.btn-info:hover {
+  background-color: #138496;
+}
+
+.btn-warning:hover {
+  background-color: #e0a800;
+}
+
+.btn-danger:hover {
+  background-color: #c82333;
+}
+
+form {
+  display: inline;
+}
